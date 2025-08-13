@@ -1,49 +1,201 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- tegnsett og skalerbarhet for diverse enheter -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="widht=device-widht, initial-scale=1" />
-    <title>Hertz Experience</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <style>
-      body {
-          background: url("assets/car.gif");
-          background-size: cover;
-          color: white;
-          overflow-x: hidden;
-      }
-      
-      .overlay {
-          background-color: rgba(0, 0, 0, 0.6);
-          padding: 2rem;
-          border-radius: 10px;
-          margin: 3rem;
-          max-width: 900px;
-      }
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      a {
-          color: #00bfff;
-      }
+    <!-- Fane navn -->
+    <title>Jasny Tyll Bonness</title>
 
-      a:hover {
-          color: #fff;
-      }
-  </style>
+    <!-- Kobler til style.css fil -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- ikoner github/linkedin osv -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!--- laster inn Three.js--->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+
+    <!-- Laster inn Vanta effect (e.g., WAVES, CELLS, NET) -->
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+
 </head>
+
 <body>
-    <div class="overlay">
+
+    <!-- Pop-up melding -->
+    <div id="popup" class="popup-overlay">
+        <div class="popup-content">
+          <h2>🚧 Nettsiden er ikke helt ferdig enda 🚧</h2>
+          <p>Jeg jobber med saken! :) </p>
+          <button onclick="closePopup()">OK</button>
+        </div>
+    </div>
+
+    <!-- Innholdetr i containeren -->
+    <div class="container">
+
+        <!-- Kontakt informasjon -->
         <header>
-            <h1>Hertz Bilutleie</h1>
-            <p><a href="index.html"><i class="fas fa-arrow-left"></i> Tilbake til CV</a></p>
+            <div class="contact-row">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:jasbonness@gmail.com">jasbonness@gmail.com</a>
+                </div>
+                <div class="vertical-divider"></div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    +47 979 63 455
+                </div>
+            </div>
+
+            <div class="contact-row">
+                <div class="contact-item">
+                    <a href="https://www.linkedin.com/in/jasny/" target="_blank">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                </div>
+                <div class="vertical-divider"></div>
+                <div class="contact-item">
+                    <a href="https://github.com/JasnyB" target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
         </header>
 
-        <section>
-            <h2>Stilling: Senior Customer Sales Representative</h2>
-            <p>Hos Hertz har jeg ansvar for kundebehandling, planlegging og koordinering av bilflåten, samt
-            utleie av biler og salg av tilhørende produkter og tjenester.</p>
-            <p>I tillegg håndterer jeg kundemottak ved retur av leiebiler, inkludert skadesjekk og registrering.</p>
-    </section>
+
+        <!-- Om meg del -->
+        <section id="summary">
+            <h2>Om meg</h2>
+            <p>Mitt navn er Jasny Tyll Bonness, og jeg er nyutdannet innen informasjonsvitenskap med et sterkt engasjement for teknologi og problemløsning.
+                Jeg ønsker å etablere meg i IT-bransen, og ser fram til å kunne kombinere akademisk kunnskap med praktisk erfaring for å skape gode, brukervennlige løsninger.
+                Jeg har jobbet fire år i Hertz Bilutleie, her har jeg utvikler verdifull erfaring innen kundebehandling, koordinering og problemløsning under tidspress. Etter
+                å ha fullført studiene i januar, har jeg vært fulltidsansatt her, samtidig som jeg har videreutviklet IT-ferdighetene mine.
+            </p>
+            <br>
+            <p>Gjennom studiene fikk jeg god kompetanse innen nettverk, databaser og programvareutvikling. Jeg har erfaring med Python, HTML, JavaScript, CSS, SQL og T-SQL. For
+                tiden gjennomfører jeg også et kurs for å styrke mine ferdigheter innen T-SQL.
+            </p>
+            <br>
+            <p>
+                På fritiden trenger jeg Brasiliansk Jiu-Jitsu, løfter vekter og driver med egne prosjekter. Denne nettsiden er et av mine personlige prosjekter, og et eksempel
+                på hvordan jeg liker å bruke teknologien kreativt. Jeg arbeider også med å utvikle en fotballdatabase i SQL. Database prosjektet har vært veldig lærerikt og har gitt
+                meg muligheten til å eksperimentere med komplekse datastrukturer. For meg handler dette om mer enn bare kode: det handler om å skape noe nyttig, lære kontinuerlig
+                og stadig utfordre meg selv.
+            </p>
+        </section>
+
+        <!-- Min arbeidserfaring -->
+        <section id="Erfaring">
+            <h2>Jobb Erfaring</h2>
+            <h4>Senior Customer Sales Representativ - Hertz Bilutleie</h4>
+            <br>
+            <p>Hos Hertz har jeg ansvar for kundebehandling, planlegging og koordinering av bilflåten, samt utleie av biler
+                og salg av tilhørende produkter og tjenester. Jeg håndterer daglig kundehenvendelser både over telefon, e-post og ved personlig oppmøte.
+            </p>
+            <p>En del av arbiedet mitt innebærer å hjelpe kunder med tekniske utfordringer, blant annet ved bruk av vår 'Self-Service Kiosk'. Jeg kommuniserer flytende på norsk,
+            engelsk og tysk, og tilpasser kommunikasjonen til ulike kundebehov</p>
+            <br>
+            <p>
+                Arbeidagen min består av en kombinasjon av utleie, vask og klargjøring av biler, planlegging av bilflåten, og mottak av kjøretøy. Ved retur gjennomfører
+                jeg skadekontroller og registrer funn i våre systemer.
+            </p>
+            <br>
+            <p>
+                Hver fjerde helg har jeg hovedansvaret for hele stasjonen, noe som innebærer å håndtere både den daglige driften og eventuelle akutte situasjoner.
+                Dette har gitt meg verdifull erfaring med teamledelse, oppgavefordeling og beslutningstakin under tidspress. Jeg fungerer ofte som en uoffisiell veilder for
+                nye ansatte, og er et naturlig kontaktpunkt for kolleger og kunder når det oppgstår spørsmål eller utfordringer.
+            </p>
+        </section>
+
+        <!-- Min utdanning -->
+        <section id="Utdanning">
+            <h2>Utdanning</h2>
+            <h4><strong>Bachelorgrad i Informasjonsvitenskap</strong></h4>
+            <br>
+            <p>Utdanningen har gitt en solid kompetanse innen informasjonsystemer, programmering og kunstig inteligens, med fokus på
+            samspillet mellom mennesker og teknologi. Jeg har opparbeidet ferdigheter i utvikling og optimalisering av digitale løsninger,
+            samt forståekse for hvordan teknologi kan tilpasses ulike brukerbehov. Gjennom emner i datahåndtering har jeg fått erfaring med
+            innsamling, larging, strukturering og analyse av data, samt praktisk bruk av databaser i prosjekter</p>
+            <br></br>
+            <h4><strong>Bachelorgrad i Tysk</strong></h4>
+            <br>
+            <p>Bachelorgraden i tysk ga en solid forståelse av det tyske språket, litteraturen og kulturen, med særlig vekt på både språklige og kulturelle nyanser.
+            Gjennom studiet utviklet jeg avanserte ferdigheter i skriftlig tysk, samt evnene til å analysre og tolke komplekse tekster. Bacheloroppgave min
+            tok for seg hanseatenes og nedertyskens innflytelse på det norske språket, der jeg sammenlignet sanger fra et tysk band som synger på nedertysk
+            med det norske språket fra idag for å finne likheter.</p>
+            <br></br>
+            <p><strong>Medier og kommunikasjon</strong></p>
+            <br>
+            <p>
+            Medier og kommunikasjon skolegangen ga meg innføring i journalistikk, foto, video, medieproduksjon og webdesign.
+                I løpet av skoletiden fikk jeg praktisk erfaring med hele prosessen fra ideutvikling til ferdig produkt.
+                Jeg produserte blant annet reklamefilm, kortfilm, nettside og podcast i skoletiden på Nordahl Grieg vgs.
+                Gjennom disse prosjektne utviklet jeg ferdiheter i både teknisk produksjon og kreativ historuefortelling, samtidig
+                som jeg lærte å samarbeide effektivt i team og arbeide med stramme tidsfrister.
+            </p>
+        </section>
+
+        <!-- Mine ferdigheter -->
+        <section id="Ferdigheter">
+            <div class="skills-grid">
+
+            <!-- Kolonne med generelle ferdigheter -->
+            <div class="skill-column">
+                <h3>Generelle Ferdigheter</h3>
+                <ul>
+                    <li>Teamledelse</li>
+                    <li>Logistikk</li>
+                    <li>Brukerstøtte</li>
+                    <li>Salg</li>
+                    <li>Kundeservice</li>
+                </ul>
+            </div>
+
+            <!-- Kolonne med teknologiske ferdigheter -->
+            <div class="skill-column">
+                <h3>Teknologiske Ferdigheter</h3>
+                <ul>
+                    <li>Python</li>
+                    <li>CSS</li>
+                    <li>SQL/T-SQL</li>
+                    <li>HTML</li>
+                    <li>Visual Studio Code</li>
+                    <li>Figma</li>
+                    <li>Power BI</li>
+                </ul>
+            </div>
+
+            <!-- Kolonne med språk -->
+            <div class="skill-column">
+                <h3>Språk</h3>
+                <ul>
+                    <li>Norsk - Morsmål</li>
+                    <li>Tysk - Morsmål</li>
+                    <li>Engelsk - Flytende muntlig og skriftlig</li>
+                </ul>
+            </div>
+
+        </div>
+
+        </section>
+        <!-- Laster inn script.js -->
+        <script src="script.js"></script>
+
+        <!-- Popup funksjon, viser/skjuler popup ved lasting og klikk -->
+        <script>
+          function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+          }
+
+          window.addEventListener('load', function () {
+            document.getElementById('popup').style.display = 'flex';
+          });
+        </script>
+
     </div>
 </body>
 </html>
