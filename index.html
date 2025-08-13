@@ -1,161 +1,49 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- tegnsett og skalerbarhet for diverse enheter -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="widht=device-widht, initial-scale=1" />
+    <title>Hertz Experience</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+      body {
+          background: url("assets/car.gif");
+          background-size: cover;
+          color: white;
+          overflow-x: hidden;
+      }
+      
+      .overlay {
+          background-color: rgba(0, 0, 0, 0.6);
+          padding: 2rem;
+          border-radius: 10px;
+          margin: 3rem;
+          max-width: 900px;
+      }
 
-    <!-- Fane navn -->
-    <title>Jasny Tyll Bonness</title>
+      a {
+          color: #00bfff;
+      }
 
-    <!-- Kobler til style.css fil -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- ikoner github/linkedin osv -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <!--- laster inn Three.js--->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-
-    <!-- Laster inn Vanta effect (e.g., WAVES, CELLS, NET) -->
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
-
+      a:hover {
+          color: #fff;
+      }
+  </style>
 </head>
-
 <body>
-
-    <!-- Pop-up melding -->
-    <div id="popup" class="popup-overlay">
-        <div class="popup-content">
-          <h2>🚧 Nettsiden er ikke helt ferdig enda 🚧</h2>
-          <p>Jeg jobber med saken! :) </p>
-          <button onclick="closePopup()">OK</button>
-        </div>
-    </div>
-
-    <!-- Innholdetr i containeren -->
-    <div class="container">
-
-        <!-- Kontakt informasjon -->
+    <div class="overlay">
         <header>
-            <div class="contact-row">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:jasbonness@gmail.com">jasbonness@gmail.com</a>
-                </div>
-                <div class="vertical-divider"></div>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    +47 979 63 455
-                </div>
-            </div>
-
-            <div class="contact-row">
-                <div class="contact-item">
-                    <a href="https://www.linkedin.com/in/jasny/" target="_blank">
-                        <i class="fab fa-linkedin"></i> LinkedIn
-                    </a>
-                </div>
-                <div class="vertical-divider"></div>
-                <div class="contact-item">
-                    <a href="https://github.com/JasnyB" target="_blank">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                </div>
-            </div>
+            <h1>Hertz Bilutleie</h1>
+            <p><a href="index.html"><i class="fas fa-arrow-left"></i> Tilbake til CV</a></p>
         </header>
 
-
-        <!-- Om meg del -->
-        <section id="summary">
-            <h2>Om meg</h2>
-            <p>Motivated IT Support Technician with 4+ years of experience in customer-facing roles. Skilled in troubleshooting, communication, and cross-functional collaboration.</p>
-        </section>
-
-        <!-- Min arbeidserfaring -->
-        <section id="Erfaring">
-            <h2>Jobb Erfaring</h2>
-            <h3>Senior Customer Sales Representativ - Hertz Bilutleie</h3>
+        <section>
+            <h2>Stilling: Senior Customer Sales Representative</h2>
             <p>Hos Hertz har jeg ansvar for kundebehandling, planlegging og koordinering av bilflåten, samt
-            utleie av biler og salg av tilhørende produkter og tjenester. I tillegg håndterer jeg kundemottak
-            ved retur av leiebiler, inkludert skadesjekk og registrering.</p>
-        </section>
-
-        <!-- Min utdanning -->
-        <section id="Utdanning">
-            <h2>Utdanning</h2>
-            <p><strong>Bachelorgrad i Informasjonsvitenskap</strong></p>
-            <p> Studiet har fokus på informasjonssystemer, programmering og kunstig intelligens, med særlig
-                vekt på interaksjon mellom mennesker og teknologi. I tillegg hadde jeg emner i datahåndtering.</p>
-
-            <p><strong>Bachelorgrad i Tysk</strong></p>
-            <p> Bachelorgraden i tysk ga en grundig innføring i det tyske språket, litteraturen og kulturen.
-                Bacheloroppgaven jeg skrev handlet om hvilken påvirkning hanseatene og nedertysk hadde på
-                det norske språket. </p>
-
-            <p><strong>Medier og kommunikasjon</strong></p>
-            <p> Medier og kommunikasjon ga meg en innføring i journalistikk, foto, video, medieproduksjon og
-                web-design. Jeg lagde blant annet reklamefilm, nettside, kortfilm og podcast på Nordahl Grieg.</p>
-        </section>
-
-        <!-- Mine ferdigheter -->
-        <section id="Ferdigheter">
-            <div class="skills-grid">
-
-            <!-- Kolonne med generelle ferdigheter -->
-            <div class="skill-column">
-                <h3>Generelle Ferdigheter</h3>
-                <ul>
-                    <li>Teamledelse</li>
-                    <li>Logistikk</li>
-                    <li>Brukerstøtte</li>
-                    <li>Salg</li>
-                    <li>Kundeservice</li>
-                </ul>
-            </div>
-
-            <!-- Kolonne med teknologiske ferdigheter -->
-            <div class="skill-column">
-                <h3>Teknologiske Ferdigheter</h3>
-                <ul>
-                    <li>Python</li>
-                    <li>CSS</li>
-                    <li>SQL/T-SQL</li>
-                    <li>HTML</li>
-                    <li>Visual Studio Code</li>
-                    <li>Figma</li>
-                    <li>Power BI</li>
-                </ul>
-            </div>
-
-            <!-- Kolonne med språk -->
-            <div class="skill-column">
-                <h3>Språk</h3>
-                <ul>
-                    <li>Norsk - Morsmål</li>
-                    <li>Tysk - Morsmål</li>
-                    <li>Engelsk - Flytende muntlig og skriftlig</li>
-                </ul>
-            </div>
-
-        </div>
-
-        </section>
-        <!-- Laster inn script.js -->
-        <script src="script.js"></script>
-
-        <!-- Popup funksjon, viser/skjuler popup ved lasting og klikk -->
-        <script>
-          function closePopup() {
-            document.getElementById('popup').style.display = 'none';
-          }
-
-          window.addEventListener('load', function () {
-            document.getElementById('popup').style.display = 'flex';
-          });
-        </script>
-
+            utleie av biler og salg av tilhørende produkter og tjenester.</p>
+            <p>I tillegg håndterer jeg kundemottak ved retur av leiebiler, inkludert skadesjekk og registrering.</p>
+    </section>
     </div>
 </body>
 </html>
