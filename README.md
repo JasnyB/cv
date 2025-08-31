@@ -1,2 +1,7 @@
 # CV Homepage
-Har laget en hjemmeside som skal fungere som CV. Et lite side prosjekt som jeg holder på med for tiden :)
+Utviklet en komplett porteføljenettside fra bunnen av ved bruk av HTML, CSS og JavaScript. 
+Implementerte tredjepartsbiblioteker som Vanta.js og Font Awesome for visuelle effekter og 
+interaktivitet. Laget et responsivt design med fleksible layouts ved hjelp av grids og flexbox, og 
+implementerte funksjoner som toggle-meny og pop-up meldinger. Prosjektet ga også erfaring 
+med praktiske designvalg, strukturering og styling av innhold for å sikre god lesbarhet og 
+brukeropplevelse
